@@ -47,12 +47,8 @@ begin
     where
       "mirror (Tip a)      = (Tip a)"
     | "mirror (Node f x y) = (Node f (mirror y) (mirror x))"
-  
-  
-  text {* Suppose that @{term xOrder} and @{term yOrder} are tree traversal
-  functions chosen from @{term preOrder}, @{term postOrder}, and @{term inOrder}.
-  Formulate and prove all valid properties of the form \mbox{@{text "xOrder
-  (mirror xt) = rev (yOrder xt)"}}. *}
+
+
 
   (*
     Now we will prove that by converting a tree in to a list and then reversing it is the same as
